@@ -1,8 +1,9 @@
 version: 0.2
 
-env
+env:
   variables: 
     ENV_NAME: dev
+    
 phases:
   build:
     commands:
