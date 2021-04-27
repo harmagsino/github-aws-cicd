@@ -55,10 +55,16 @@ Resources:
               - Sid: S3BucketIdentity
                 Effect: Allow
                 Action:
-                  - 's3:GetBucketAcl'
+                  - 's3:GetBucketAcl' 
                   - 's3:GetBucketLocation'
                 Resource:
                   - '*'
+              - Sid: CodeBuildPolicy
+                Effect: Allow
+                Action:
+                  - 'codebuild:BatchGetBuilds'
+                  - 'codebuild:StartBuild'
+                Resource: '*'
   CodeBuildSourceCredential:
     Type: 'AWS::CodeBuild::SourceCredential'
     Properties:
